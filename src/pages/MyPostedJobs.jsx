@@ -10,7 +10,9 @@ const MyPostedJobs = () => {
 
   useEffect(() => {
     axiosSecure
-      .get(`http://localhost:5000/jobs?email=${user.email}`)
+      .get(
+        `https://job-portal-server-rho-six.vercel.app/jobs?email=${user.email}`
+      )
       .then((result) => {
         setJobs(result.data);
       })

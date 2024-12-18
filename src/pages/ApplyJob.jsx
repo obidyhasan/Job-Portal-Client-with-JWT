@@ -31,7 +31,10 @@ const ApplyJob = () => {
     };
 
     axios
-      .post("http://localhost:5000/apply-jobs", applyInfo)
+      .post(
+        "https://job-portal-server-rho-six.vercel.app/apply-jobs",
+        applyInfo
+      )
       .then((result) => {
         if (result.data.insertedId) {
           Swal.fire({

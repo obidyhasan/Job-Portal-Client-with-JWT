@@ -8,7 +8,7 @@ const ViewApplications = () => {
   function handelStatusChange(e, id) {
     const status = e.target.value;
     axios
-      .patch(`http://localhost:5000/apply-jobs/${id}`, {
+      .patch(`https://job-portal-server-rho-six.vercel.app/apply-jobs/${id}`, {
         status,
       })
       .then((result) => {

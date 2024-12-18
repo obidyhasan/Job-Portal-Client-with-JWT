@@ -34,7 +34,9 @@ const AuthProvider = ({ children }) => {
         const user = { email: currentUser.email };
 
         axios
-          .post("http://localhost:5000/jwt", user, { withCredentials: true })
+          .post("https://job-portal-server-rho-six.vercel.app/jwt", user, {
+            withCredentials: true,
+          })
           .then(() => {})
           .catch((err) => {
             console.log(err.message);
@@ -43,7 +45,7 @@ const AuthProvider = ({ children }) => {
         setLoading(false);
       } else {
         axios
-          .post("http://localhost:5000/logout", {})
+          .post("https://job-portal-server-rho-six.vercel.app/logout", {})
           .then(() => {})
           .catch((err) => {
             console.log(err.message);

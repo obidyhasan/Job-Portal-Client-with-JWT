@@ -17,7 +17,7 @@ const AddJobs = () => {
     newJobInfo.responsibilities = jobInfo.responsibilities.split("\n");
 
     axios
-      .post("http://localhost:5000/jobs", newJobInfo)
+      .post("https://job-portal-server-rho-six.vercel.app/jobs", newJobInfo)
       .then((result) => {
         if (result.data.insertedId) {
           Swal.fire({

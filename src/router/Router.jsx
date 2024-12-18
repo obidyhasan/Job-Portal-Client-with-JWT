@@ -39,7 +39,9 @@ const Router = () => {
             </PrivateRouter>
           ),
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/jobs/${params.id}`),
+            fetch(
+              `https://job-portal-server-rho-six.vercel.app/jobs/${params.id}`
+            ),
         },
         {
           path: "/applyJob/:id",
@@ -49,7 +51,9 @@ const Router = () => {
             </PrivateRouter>
           ),
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/jobs/${params.id}`),
+            fetch(
+              `https://job-portal-server-rho-six.vercel.app/jobs/${params.id}`
+            ),
         },
         {
           path: "/jobApplyList",
@@ -83,7 +87,9 @@ const Router = () => {
             </PrivateRouter>
           ),
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/apply-jobs/jobs/${params.jobId}`),
+            fetch(
+              `https://job-portal-server-rho-six.vercel.app/apply-jobs/jobs/${params.jobId}`
+            ),
         },
       ],
     },
